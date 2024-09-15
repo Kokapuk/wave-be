@@ -3,7 +3,7 @@ import { IsInt, Min } from 'class-validator';
 
 export class FindTracksDto {
   @Min(1, { message: 'Invalid page number' })
-  @IsInt()
+  @IsInt({ message: 'Invalid page number' })
   @Type(() => Number)
   page: number = 1;
 }

@@ -10,7 +10,7 @@ export class CreateTrackDto {
   provider: Provider;
 
   @MaxLength(256, { message: 'Track source is too long' })
-  @IsNotEmpty()
+  @IsNotEmpty({ message: 'Track source is required' })
   source: string;
 
   @MaxLength(64, { message: 'Track name is too long' })
